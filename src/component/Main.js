@@ -70,7 +70,7 @@ onBarCodeRead(e) {
                             <Text style={styles.Text} >  ชิ้น </Text>
                         </View>
                         <View style={styles.Bar} >
-                            <Text style={styles.Num}>
+                            <Text style={styles.Textsum}>
                             { this.state.sumPrice }
                             </Text>
                             <Text style={styles.Text} >  บาท </Text>
@@ -98,7 +98,7 @@ onBarCodeRead(e) {
                     </View>
                     <View style={{flexDirection:"row"}} >
                     <View style={{flex:1,justifyContent:"center"}} >
-                        <Text style={styles.TextHead} >จำนวน</Text>
+                        <Text style={styles.TextHead} >จำนวนชิ้น</Text>
                     </View> 
                         <View style={{flex:1,backgroundColor:"#ffffff"}} >
                             <View style={{flexDirection:"row",marginTop:12,justifyContent:"center",}} >
@@ -153,7 +153,7 @@ onBarCodeRead(e) {
                                 <Text style={{fontSize:20,
                                     textAlign:"center",
                                     marginTop:10,color:"#1E90FF"}}
-                                    >แก้ไข</Text>
+                                    >รายละเอียด</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
         justifyContent:"space-around",
     },
     Scan:{
-        flex:3,
+        flex:2,
         backgroundColor:'#ffffff',
     },
     Data:{
@@ -220,6 +220,14 @@ const styles = StyleSheet.create({
         fontSize:20,
         textAlign:"center",
         marginTop:15,
+    },
+    Textsum:{
+        fontSize:40,
+        textAlign:"center",
+        marginBottom:10,
+        fontWeight:"bold",
+        justifyContent:"center",
+        color:"#ff8072"
     },
     Bar:{
         flex:1,

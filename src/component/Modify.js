@@ -17,7 +17,7 @@ export default class Modify extends Component{
         return(
             <View style={{flex:1,}} >
             {/* หัวข้อ */}
-                <Backheader/>
+                <Backheader type="รายละเอียดการขาย" />
                     <View style={{height:85,flex:0,flexDirection:"row",borderBottomWidth:1,borderColor:"#ff584f",backgroundColor:"#ffffff",}} >             
                         <View style={styles.Bar} >
                             <Text style={styles.Num} >3</Text>

@@ -9,20 +9,21 @@ export default class BackHerder extends Component{
     }
     render(){
         return(
-            <View style={{backgroundColor:"#FA8072",flexDirection:"row",height:50}}>
+            <View style={{flexDirection:"row",height:50}}>
                 <StatusBar
                     backgroundColor="#c35046"
                     barStyle="light-content"
                 />
-                <View style={{flex:1,justifyContent:"center",flexDirection:"row",}} >
-                    <View style={{flex:1,flexDirection:"row",alignItems:"center"}} >
-                        <TouchableOpacity onPress={this.back} style={{justifyContent:"center",alignItems:"center",}} >
-                            <Text style={styles.textback} >{'<'}</Text>
+                <View style={{flex:1,justifyContent:"center",flexDirection:"row"}} >
+                    <View style={{flex:1,flexDirection:"row",justifyContent:"center",alignItems:"center"}} >
+                        <TouchableOpacity onPress={this.back} style={{flex:1}} >
+                            <Text style={styles.textback} >{'< กลับ'}</Text>
                         </TouchableOpacity>
+                    <Text style={styles.text} >{this.props.type}</Text>
                     </View>
-                    <View style={{flex:2.5,justifyContent:"center"}} >
-                        <Text style={styles.text} >รายการ</Text>
-                    </View>
+                    {/* <View style={{flex:3,justifyContent:"center"}} >
+                       <Text style={styles.text} >รายการชำระเงิน</Text>
+                    </View> */}
                 </View>
             </View>
         )
@@ -32,14 +33,15 @@ export default class BackHerder extends Component{
 const styles = StyleSheet.create({
   
     textback:{
-        fontSize:40,
-        textAlign:"left",
-        color:"#000000",
+        fontSize:20,
+        color:"#0a60ff",
         marginLeft:13
     },
     text:{
+        flex:2.2,
         fontSize:25,
         textAlign:"left",
-        color:"#000000"
+        color:"#FF8072",
+        justifyContent:"center"
     }
 });
